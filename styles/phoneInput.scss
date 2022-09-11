@@ -1,0 +1,50 @@
+.phoneNumberContainer {
+  .phoneInput {
+    background: transparent !important ;
+    border: none !important;
+    border-bottom: 1px solid rgba(216, 222, 233, 0.6901960784) !important;
+    border-radius: 0 !important;
+  }
+  .phoneButton {
+    background-color: transparent !important;
+    border: none !important;
+    .selected-flag {
+      background-color: transparent !important;
+    }
+    .country-list {
+      background: #2e3440 !important;
+      .country {
+        &:hover {
+          background-color: #3b4252 !important;
+        }
+        span {
+          color: rgb(197, 211, 233) !important;
+        }
+        .dial-code{
+            
+            color: rgba(197, 211, 233, 0.466) !important;
+        }
+      }
+      .country.highlight {
+        background-color: #515f81 !important;
+      }
+      .search-box {
+        border: 1px solid #3b4252 !important;
+        width: calc(100% - 40px);
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color: #3B4252 !important;
+      }
+    }
+    .search {
+      background-color: #2e3440 !important;
+    }
+    .arrow{
+        border-top-color: #a8afbd !important;
+    }
+    .up{
+        border-bottom-color: #a8afbd !important;
+
+    }
+  }
+}
