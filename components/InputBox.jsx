@@ -5,10 +5,17 @@ import img from '../assets/img.png'
 const InputBox = () => {
     return (
         <div className='inputBox'>
-            <input type="text" placeholder='type something...' />
+            {/* <input type="text" placeholder='type something...' /> */}
+            <textarea name="" id="" cols="30" rows="2" placeholder='type something...'></textarea>
             <div className="btns">
-                <button> <Image src={attach} width="25" height="25" /></button>
-                <button> <Image src={img} width="25" height="25" /></button>
+                <input type="file" id="file" style={{ display: 'none' }} accept="image/*" />
+                <label htmlFor="file">
+                    <Image src={attach} width="25" height="25" />
+                </label>
+                <input type="file" id="img" style={{ display: 'none' }} accept="image/jpeg, image/png, image/heic" />
+                <label htmlFor="img">
+                    <Image src={img} width="25" height="25" />
+                    </label>
             </div>
         </div>
     );

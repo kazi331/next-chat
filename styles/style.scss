@@ -1,3 +1,11 @@
+:root {
+  --main-bg: #2e3440;
+  --container-bg: #3b4252;
+  --text: #d8dee9;
+  --accent-color: #6d85d0;
+  --nav-bg-1: #68677e;
+  --nav-bg-2: #5e5c9c;
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +22,13 @@ body {
   //   font-family: "Rajdhani", sans-serif;
 }
 .container {
-  background-color: #2e3440;
+  background-color: var(--main-bg);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   form {
-    background: #3b4252;
+    background: var(--container-bg);
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -57,7 +65,7 @@ body {
     button {
       padding: 10px;
       font-size: 1rem;
-      background: #6d85d0;
+      background: var(--accent-color);
       border: none;
       color: #ffffff;
       border-radius: 3px;
@@ -65,7 +73,7 @@ body {
       cursor: pointer;
     }
     .pickAvatar {
-      background-color: #2e3440b9;
+      background-color: var(--main-bg);
       border-radius: 5px;
       padding: 10px;
       display: flex;
@@ -79,7 +87,7 @@ body {
     }
     a {
       text-decoration: none;
-      color: #a7bdff;
+      color: var(--accent-color);
     }
     .header {
       text-align: center;
@@ -98,12 +106,13 @@ body {
 // home page design
 
 .home {
-  background-color: #2e3440;
+  background-color: var(--main-bg);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   .chatContainer {
+    background-color: var(--container-bg);
     border-radius: 10px;
     box-shadow: 1px 1px 12px 1px #232b46;
     // padding: 10px;
@@ -113,7 +122,7 @@ body {
     overflow: hidden;
     .sidebar {
       flex: 1;
-      background-color: #3d3c61;
+      // background-color: #3d3c61;
       font-family: "Rajdhani", sans-serif;
       &::-webkit-scrollbar-track {
         background: #000;
@@ -125,7 +134,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #2e2d52;
+        background-color: var(--nav-bg-1);
         padding: 12px 8px;
         h2 {
           font-size: 1.1rem;
@@ -145,14 +154,15 @@ body {
           }
           button {
             background-color: rgb(223, 223, 223);
+            background: var(--accent-color);
             border: none;
-            color: #6d85d0;
+            color: var(--text);
             padding: 4px 6px;
             border-radius: 3px;
             cursor: pointer;
             &:hover {
-              background-color: rgb(231, 231, 231);
-              color: #6b83cf;
+              background-color: var(--text);
+              color: var(--accent-color);
             }
           }
         }
@@ -164,25 +174,21 @@ body {
           border: none;
           padding: 10px;
           color: lightgray;
-          width: 100%;
+          width: calc(100% - 20px);
           font-size: 1rem;
-          border-bottom: 1px solid #50507e;
+          border-bottom: 1px solid #747494;
           font-family: rajdhani;
           &:focus {
             outline: none;
-            background-color: #474670;
           }
           &::placeholder {
-            color: #a4a4c0;
+            color: rgb(176, 182, 230);
           }
         }
       }
       .chats {
         height: calc(100% - 91px);
         overflow-y: auto;
-        // &::-webkit-scrollbar-thumb {
-        //   // background-color: red ;
-        // }
         .message {
           display: flex;
           gap: 10px;
@@ -190,7 +196,7 @@ body {
           padding: 10px;
           cursor: pointer;
           &:hover {
-            background-color: #2e2d52;
+            background-color: var(--nav-bg-1);
           }
           img {
             width: 35px;
@@ -209,14 +215,15 @@ body {
     }
     .chat {
       flex: 2;
-      background-color: rgba(65, 13, 255, 0.048);
+      // background-color: rgba(65, 13, 255, 0.048);
+
       .navbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 12px 8px;
         font-family: rajdhani;
-        background: #5e5b8e;
+        background: var(--nav-bg-2);
         h2 {
           font-size: 1.1rem;
           font-weight: 500;
@@ -238,9 +245,10 @@ body {
         }
       }
       .chatBody {
-        background-color: #6d85d0;
-        height: calc(100% - 98px);
+        // background-color: #6d85d0;
+        height: calc(100% - 131px);
         overflow-y: auto;
+        padding-bottom: 10px;
         .messageBody {
           display: flex;
           align-items: center;
@@ -254,14 +262,30 @@ body {
         }
       }
       .inputBox {
-        background-color: gray;
+        background-color: var(--nav-bg-2);
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 12px 8px;
+        textarea {
+          background-color: rgba(223, 223, 223, 0.158);
+          padding: 8px 10px;
+          border-radius: 5px;
+          border: none;
+          width: 80%;
+          outline: none;
+          font-family: ubuntu;
+          font-size: 0.9rem;
+          resize: none;
+
+          &::placeholder {
+            color: var(--text);
+          }
+        }
         .btns {
+          padding-right: 10px;
           display: flex;
-          button {
+          label {
             width: 25px;
             height: 25px;
             background-color: transparent;
