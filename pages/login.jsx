@@ -19,7 +19,7 @@ const Login = () => {
                 <input name="email" type="email" placeholder='Email'  required/>
                 <input name="password" type="password" placeholder='password'  required/>
                 <button>Login</button>
-                <p>Don't Have an account? <Link href="/register">Register</Link> </p>
+                <p>Don&apos;t Have an account? <Link href="/register">Register</Link> </p>
             </form>
         </div>
     );
