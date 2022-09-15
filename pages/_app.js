@@ -10,12 +10,3 @@ function MyApp({ Component, ...pageProps}) {
 }
 
 export default MyApp
-
-
-
-
-picture 
-natural
-nature 
-cheap 
-chip 
