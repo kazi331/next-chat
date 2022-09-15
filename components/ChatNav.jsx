@@ -7,9 +7,9 @@ const ChatNav = () => {
     <div className='navbar'>
     <h2>Tylor</h2>
     <div className='btns'>
-     <button><Image src={cam} width="25" height="25" /></button>
-     <button><Image src={add} width="25" height="25" /></button>
-     <button><Image src={more} width="25" height="25" /></button>
+     <button><Image src={cam} alt="image" width="25" height="25" /></button>
+     <button><Image src={add} alt="image" width="25" height="25" /></button>
+     <button><Image src={more} alt="image" width="25" height="25" /></button>
     </div>
   </div>
   )

@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import attach from '../assets/attach.png'
-import img from '../assets/img.png'
+import Image from 'next/image';
+import attach from '../assets/attach.png';
+import img from '../assets/img.png';
 
 const InputBox = () => {
     return (
@@ -10,11 +10,11 @@ const InputBox = () => {
             <div className="btns">
                 <input type="file" id="file" style={{ display: 'none' }} accept="image/*" />
                 <label htmlFor="file">
-                    <Image src={attach} width="25" height="25" />
+                    <Image src={attach} alt="image" width="25" height="25" />
                 </label>
                 <input type="file" id="img" style={{ display: 'none' }} accept="image/jpeg, image/png, image/heic" />
                 <label htmlFor="img">
-                    <Image src={img} width="25" height="25" />
+                    <Image src={img} alt="image" width="25" height="25" />
                     </label>
             </div>
         </div>
