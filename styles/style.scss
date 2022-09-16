@@ -47,17 +47,19 @@ body {
       color: #d8dee9;
       font-size: 1rem;
       transition: 0.4s;
+      
       // font-family: "Ubuntu", sans-serif;
       // font-family: "Ms Madi";
       &:focus {
         border-color: rgb(255, 255, 255);
       }
-      &:nth-of-type(4) {
-        border: none;
-      }
+      // &:last-child {
+      //   border: none;
+      // }
       &::placeholder {
         color: #d8dee9b0;
       }
+     
     }
     .warn {
       color: rgb(255, 132, 132);
